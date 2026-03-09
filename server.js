@@ -1,7 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const dns = require("dns");
+// const dns = require("dns");
 const dbConnect = require("./src/config/db");
 const userRoutes = require("./src/routes/userRoutes");
 const productRoutes = require("./src/routes/productRoutes");
@@ -10,7 +10,7 @@ const { notFound, errorHandler } = require("./src/middlewares/errorMiddleware");
 dotenv.config();
 dbConnect();
 const app = express();
-dns.setServers(["1.1.1.1","0.0.0.0"])
+// dns.setServers(["1.1.1.1","0.0.0.0"])
 
 // Middlewares
 app.use(cors());
